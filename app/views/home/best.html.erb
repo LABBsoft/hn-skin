@@ -1,0 +1,28 @@
+<h1>Best#index</h1>
+<h1>Listing articles</h1>
+ 
+<table>
+    <tr>
+        <th>Title</th>
+        <th>By</th>
+        <th>Descendants</th>
+        <th>ID</th>
+        <th>Kids</th>
+        <th>Score</th>
+        <th>Time</th>
+        <th>Type</th>
+    </tr>
+
+  <% @items.each do |item| %>
+    <tr>
+        <td><%= item["title"] %></td>
+        <td><%= item["by"] %></td>
+        <td><%= item["descendants"] %></td>
+        <td><%= item["id"] %></td>
+        <td><%= item["kids"] %></td>
+        <td><%= item["score"] %></td>
+        <td><%= item["time"] %></td>
+        <td><%= item["type"] %></td>
+    </tr>
+  <% end %>
+</table>
