@@ -4,7 +4,7 @@ module HomeHelper
         @response = HTTP.get('https://hacker-news.firebaseio.com/v0/' + type + 'stories.json')
         @ids = JSON.parse(@response)
         @items = []
-        @ids[0..4].each do |item|
+        @ids[0..24].each do |item|
           @items << getItem(item)
         end    
     end
