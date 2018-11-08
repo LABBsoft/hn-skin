@@ -7,11 +7,26 @@
 }
  
 html{
+    overflow-x: hidden;
     background-color:#121215;
+    min-width:720px;
+}
+
+body{
+    min-width:800px;
+}
+
+h1{
+    margin-left:-9vw;
 }
 
 h1, h2{
     color:white;
+}
+
+p{
+    margin:0px;
+    margin-right:10px;
 }
 
 body{
@@ -27,7 +42,6 @@ table{
 .card{
     padding:10px;
     background-color:var(--dark);
-    margin-bottom:20px;
     color:white;
     width:99%;
 }
@@ -49,23 +63,56 @@ table{
 }
 
 .color{
-    width:1%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    width:5%;
     height:68px;
     background-color:var(--primary);
 }
 
 .color2{
-    width:1%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    width:5%;
     height:68px;
     background-color:var(--secondary);
 }
 
 .color3{
-    width:1%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    width:5%;
     height:68px;
     background-color:var(--tertiary);
 }
 
 .container{
     display:flex;
+    margin-bottom:20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    border:none;
+    outline:0;
+}
+
+.topbar{
+    display:flex;
+    width:100vw;
+    margin-left:-10vw;
+    padding:10px;
+    background-color:var(--dark);
+    margin-bottom:20px;
+}
+
+.active{
+    color:var(--white);
 }

@@ -1,12 +1,16 @@
 <h1>HackerNews</h1>
-<h2>Today</h2>
- 
+<div class="topbar">
+<a href="/"><p>Today</p></a>
+<a href="/best"><p>Best</p></a>
+<a href="/new"><p>New</p></a>
+</div>
+
 <% @items.each do |item| %>
+<a href="<%= item['url'] %>">
 <div class="container">
-    <div class="color"></div>    
+    <div class="color"> <%= item["score"] %> </div>    
     <div class="card">
         <div class="top">
-            <%= item["score"] %>
             <%= item["title"] %>
             <div class="right"><%= item["by"] %></div>
         </div>
@@ -17,4 +21,5 @@
         </div>
     </div>
 </div>
+</a>
 <% end %>
