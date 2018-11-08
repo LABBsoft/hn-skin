@@ -1,26 +1,20 @@
-<h1>Home#index</h1>
-<h1>Listing articles</h1>
+<h1>HackerNews</h1>
+<h2>Today</h2>
  
-<table>
-    <tr>
-        <th>Title</th>
-        <th>By</th>
-        <th>Descendants</th>
-        <th>ID</th>
-        <th>Score</th>
-        <th>Time</th>
-        <th>Type</th>
-    </tr>
+<% @items.each do |item| %>
+<div class="container">
+    <div class="color"></div>    
+    <div class="card">
+        <div class="top">
+            <%= item["score"] %>
+            <%= item["title"] %>
+            <div class="right"><%= item["by"] %></div>
+        </div>
+        <div class="bottom">
+            <p>comments:</p>
+            <%= item["descendants"] %>
 
-  <% @items.each do |item| %>
-    <tr>
-        <td><%= item["title"] %></td>
-        <td><%= item["by"] %></td>
-        <td><%= item["descendants"] %></td>
-        <td><%= item["id"] %></td>
-        <td><%= item["score"] %></td>
-        <td><%= parseTime(item["time"]) %></td>
-        <td><%= item["type"] %></td>
-    </tr>
-  <% end %>
-</table>
+        </div>
+    </div>
+</div>
+<% end %>
